@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <title>Orange Moose | Google Ads editor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/app.js">
+  <link rel="icon" href="assets/fav.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+  <meta name="keywords" content="puslapių kūrimas, puslapių dizainas, tinklalapių kūrimas, internetinių svetainių kūrimas, internetinių puslapių kūrimas, interneto svetainių kūrimas"/>
+  <meta name="description" content="Svetainių kūrimas"/>  
+</head>
+<body>
+  <header>
+    <img id="logo" src="assets/ads-logo-sm.png" alt="Google Ads logo">
+    <div class="separator"></div>
+    <p>Create text ads faster</p>
+    <p id="icon"><span style="color: #fff;">Orange</span> <span style="color: #ff9900;">Moose</span></p>
+  </header>
+  <p id="ls-heading">LOCAL STORAGE</p>
+  <button id="saveLS" class="ls-btn" type="button">Save</button>
+  <a href="" id="downloadLink"><button id="exportLS" class="ls-btn" type="button">Export</button></a>
+  <button id="importLS" class="ls-btn" type="button">Import</button>
+  <button id="clearLS" class="ls-btn" type="button">Clear</button>
+    <!--* Local storage popups *-->
+    <div id="popup-wrap">
+      <div id="saveMsg" class="ls-popup">Local storage saved.</div>
+      <div id="importMsg" class="ls-popup">Local storage imported.</div>
+      <div id="clearMsg" class="ls-popup">Local storage cleared.</div>
+    </div>
+  <!--* Media < 1280px overlay *-->
+  <section class="media-overlay">
+    <h3>Works better on larger screens</h3>
+    <p>Get back to your desk.</p>
+    <button class="media-overlay-btn">OK, got it</button>
+  </section>
+  <section class="main">
+    <!--***** LEFT SIDE *****-->
+    <section class="left">
+      <p id="ad-editor-heading">Create text ad</p>
+      <!--Final URL-->
+      <p class="input-label">Final URL</p>
+      <input type="text" id="final-url" placeholder="Final URL" value="">
+      <hr class="separator">
+      <!--Headline 1-->
+      <p class="input-label">Headline 1</p>
+      <input type="text" id="headline-1" placeholder="Headline 1" value="" maxlength="30">
+      <hr class="separator">
+      <p class="symbol-count"><span class="symbols head1-count">0</span> / 30</p>
+      <!--Headline 2-->
+      <p class="input-label">Headline 2</p>
+      <input type="text" id="headline-2" placeholder="Headline 2" value="" maxlength="30">
+      <hr class="separator">
+      <p class="symbol-count"><span class="symbols head2-count">0</span> / 30</p>
+      <!--Headline 3-->
+      <p class="input-label">Headline 3</p>
+      <div class="with-new">
+        <input type="text" id="headline-3" placeholder="Headline 3" value="" maxlength="30">
+        <p class="new-msg">NEW</p>
+      </div>
+      <hr class="separator">
+      <p class="symbol-count"><span class="symbols head3-count">0</span> / 30</p>
+      <!--Display path-->
+      <p class="input-label">Display path</p>
+      <div class="path">
+        <p class="url">www.example.com</p>
+        <span>/</span>
+        <div class="path-1">
+          <input type="text" id="path-1" placeholder="Path 1" value="" maxlength="15">
+          <hr class="separator">
+          <p class="symbol-count"><span class="symbols path1-count">0</span> / 15</p>
+        </div>
+        <p class="url"> / </p>
+        <div class="path-2">
+          <input type="text" id="path-2" placeholder="Path 2" value="" maxlength="15">
+          <hr class="separator">
+          <p class="symbol-count"><span class="symbols path2-count">0</span> / 15</p>
+        </div>
+      </div>
+      <!--Description 1-->
+      <p class="input-label">Description 1</p>
+      <input type="textarea" id="description-1" placeholder="Description 1" value="" maxlength="90">
+      <hr class="separator">
+      <p class="symbol-count"><span class="symbols desc1-count">0</span> / 90</p>
+      <!--Description 2-->
+      <p class="input-label">Description 2</p>
+      <div class="with-new">
+        <input type="textarea" id="description-2" placeholder="Description 2" value="" maxlength="90">
+        <p class="new-msg">NEW</p>
+      </div>
+      <hr class="separator">
+      <p class="symbol-count"><span class="symbols desc2-count">0</span> / 90</p>
+      <!--Controls-->
+      <div class="controls">
+        <button id="save-ad" class="left-btn" type="button">Save and start new</button>
+        <button id="clear-ad" class="left-btn subtle" type="button">Clear</button>
+      </div>  
+    </section>
+
+    <!--***** RIGHT SIDE *****-->
+    <section class="right">
+      <div class="right--top">
+        <p>Preview and save copy of your ads</p>
+      </div>
+      <div class="right--bottom">
+        <!--Ad output container-->
+        <div class="ad-container">
+        </div>
+      </div>
+
+      <button class="right-btn" type="button">Copy all</button>
+    </section>
+  </section>
+  <section id='dummy-form'>
+      <textarea type="textarea" id="dummy-input" placeholder="" value=""></textarea>
+  </section>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
